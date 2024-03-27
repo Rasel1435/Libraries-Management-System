@@ -33,11 +33,15 @@ class Library:
             
             self.books.append(book)
             logging.info(f"Added book: {book['title']} by {book['author']}")
-            
-            more = input("Do you want to add more books? (y/n): ")
-            if more.lower() != 'yes':
+            # if you want to add more at a time
+            more = input("Do you want to add more books? If yes, then press '1' or '7' to exit: ")
+            if more == '1':
+                continue
+            elif more == '7':
                 self.save_books()
                 break
+            else:
+                print("Invalid input. Please enter '1' to add more books or '7' to exit.")
     # """add_book Function End """
     
     # Our second step is Update item or book if there is any mistake in exiting book or item
@@ -58,7 +62,6 @@ class Library:
                 except Exception as e:
                     logging.error(f"Error updating book: {e}")
                 break
-        
         if not found:
             logging.error(f"Book with ID {book_id} not found.")
         self.save_books()
@@ -78,7 +81,6 @@ class Library:
                 except Exception as e:
                     logging.error(f"Error deleting book: {e}")
                 break
-        
         if not found:
             logging.error(f"Book with ID {book_id} not found.")
         self.save_books()
@@ -87,11 +89,10 @@ class Library:
     # Our fourth step is display item or book let's create function for it
     # """ display_book Function Start """
     def display_books(self):
-        if not self.books:
-            print("No books available.")
-            logging.warning("No books available.")
+        if book not in self.books:
+            logging.warning("books are not available.")
         else:
-            print("Available books:")
+            print("Available books in the Libraries:")
             for i, book in enumerate(self.books):
                 print(f"{i}: {book['title']} by {book['author']}, ID: {book['id']}, Published Year: {book['published_year']}")
     # """ display_book Function Start """
@@ -111,7 +112,6 @@ class Library:
                 except Exception as e:
                     logging.error(f"Error lending book: {e}")
                 break
-        
         if not found:
             logging.error(f"Book with ID {book_id} not found.")
         self.save_books()
@@ -130,6 +130,7 @@ class Library:
         self.save_books()
     # """ return_book Function End """
 
+# Class and all def will be call from here
 def main():
     library = Library()
     library.load_books()
@@ -161,6 +162,7 @@ def main():
             break
         else:
             print("Invalid choice. Please enter a number between 1 and 7.")
+            
 
 if __name__ == "__main__":
     main()
