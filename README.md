@@ -1,7 +1,7 @@
 # Libraries-Management-System
 
 # Summary:
-### I have created requrements,txt file by
+### I have created requrements.txt file by
     pip freeze > requirements.txt
 I've developed a simple Library Management System using Python. Here's an overview of its functionality:
 
