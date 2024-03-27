@@ -5,7 +5,7 @@ logging.basicConfig(filename='library.log', level=logging.INFO, format='%(asctim
 
 class Library:
     def __init__(self):
-        self.books = []
+        self.books = [] #storage 
 
     # Our Libraries Json File will be Load From here
     def load_books(self):
@@ -25,10 +25,10 @@ class Library:
     # """ add_book Function Start """
     def add_book(self): 
         while True:
-            title = input("Enter book title: ")
-            author = input("Enter book author: ")
-            book_id = input("Enter book ID: ")
-            published_year = input("Enter published year: ")
+            title = input("Enter your book title: ")
+            author = input("Enter your book author: ")
+            book_id = input("Enter your book ID: ")
+            published_year = input("Enter the book published year: ")
             book = {'title': title, 'author': author, 'id': book_id, 'published_year': published_year}
             
             self.books.append(book)
@@ -47,15 +47,15 @@ class Library:
     # Our second step is Update item or book if there is any mistake in exiting book or item
     # """ Update_book Function Start """
     def update_book(self):
-        book_id = input("Enter book ID to update: ")
+        book_id = input("Enter your book ID which you want to update: ")
         found = False
         for book in self.books:
             if book['id'] == book_id:
                 try:
-                    title = input("Enter new book title: ")
-                    author = input("Enter new book author: ")
-                    new_id = input("Enter new book ID: ")
-                    published_year = input("Enter new published year: ")
+                    title = input("Enter your new book title: ")
+                    author = input("Enter your new book author: ")
+                    new_id = input("Enter your new book ID: ")
+                    published_year = input("Enter the new book published year: ")
                     book.update({'title': title, 'author': author, 'id': new_id, 'published_year': published_year})
                     logging.info(f"Updated book: {book['title']} by {book['author']}")
                     found = True
@@ -63,14 +63,14 @@ class Library:
                     logging.error(f"Error updating book: {e}")
                 break
         if not found:
-            logging.error(f"Book with ID {book_id} not found.")
+            logging.error(f"Book with ID {book_id} are not found.")
         self.save_books()
     # """update_book Function End """
     
     # Our third step is delete item or book let's create function for it
     # """ delete_book Function Start """
     def delete_book(self):
-        book_id = input("Enter book ID to delete: ")
+        book_id = input("Enter your book ID which you want to delete: ")
         found = False
         for book in self.books:
             if book['id'] == book_id:
@@ -100,7 +100,7 @@ class Library:
     # Our fifth step is Lend item or book let's create function for it
     # """ lend_book Function Start """
     def lend_book(self):
-        book_id = input("Enter book ID to lend: ")
+        book_id = input("Enter book ID which you want to lend: ")
         found = False
         for book in self.books:
             if book['id'] == book_id:
@@ -120,9 +120,9 @@ class Library:
     # Our sixth step is Return item or book let's create function for it
     # """ return_book Function Start """
     def return_book(self):
-        title = input("Enter book title to return: ")
-        author = input("Enter book author to return: ")
-        book_id = input("Enter book ID to return: ")
+        title = input("Enter the book title to return: ")
+        author = input("Enter the book author to return: ")
+        book_id = input("Enter the book ID to return: ")
         published_year = input("Enter published year of the book: ")
         book = {'title': title, 'author': author, 'id': book_id, 'published_year': published_year}
         self.books.append(book)
