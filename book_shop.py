@@ -7,7 +7,7 @@ class Library:
     def __init__(self):
         self.books = []
 
-    # 
+    # Our Libraries Json File will be Load From here
     def load_books(self):
         try:
             with open('books.json', 'r') as file:
@@ -16,11 +16,14 @@ class Library:
             logging.warning('No book data found.')
             self.books = []
 
+    # Our Libraries Json File will be Save From here
     def save_books(self):
         with open('books.json', 'w') as file:
             json.dump(self.books, file, indent=4)
 
-    def add_book(self):
+    # Our first step is add item or book let's create function for it
+    # """ add_book Function Start """
+    def add_book(self): 
         while True:
             title = input("Enter book title: ")
             author = input("Enter book author: ")
@@ -35,7 +38,10 @@ class Library:
             if more.lower() != 'yes':
                 self.save_books()
                 break
-
+    # """add_book Function End """
+    
+    # Our second step is Update item or book if there is any mistake in exiting book or item
+    # """ Update_book Function Start """
     def update_book(self):
         book_id = input("Enter book ID to update: ")
         found = False
@@ -55,9 +61,11 @@ class Library:
         
         if not found:
             logging.error(f"Book with ID {book_id} not found.")
-
         self.save_books()
-
+    # """update_book Function End """
+    
+    # Our third step is delete item or book let's create function for it
+    # """ delete_book Function Start """
     def delete_book(self):
         book_id = input("Enter book ID to delete: ")
         found = False
@@ -73,9 +81,11 @@ class Library:
         
         if not found:
             logging.error(f"Book with ID {book_id} not found.")
-
         self.save_books()
-
+    # """ delete_book Function End """
+    
+    # Our fourth step is display item or book let's create function for it
+    # """ display_book Function Start """
     def display_books(self):
         if not self.books:
             print("No books available.")
@@ -84,7 +94,10 @@ class Library:
             print("Available books:")
             for i, book in enumerate(self.books):
                 print(f"{i}: {book['title']} by {book['author']}, ID: {book['id']}, Published Year: {book['published_year']}")
-
+    # """ display_book Function Start """
+    
+    # Our fifth step is Lend item or book let's create function for it
+    # """ lend_book Function Start """
     def lend_book(self):
         book_id = input("Enter book ID to lend: ")
         found = False
@@ -101,9 +114,11 @@ class Library:
         
         if not found:
             logging.error(f"Book with ID {book_id} not found.")
-
         self.save_books()
-
+    # """ lend_book Function End """
+    
+    # Our sixth step is Return item or book let's create function for it
+    # """ return_book Function Start """
     def return_book(self):
         title = input("Enter book title to return: ")
         author = input("Enter book author to return: ")
@@ -113,7 +128,7 @@ class Library:
         self.books.append(book)
         logging.info(f"Returned book: {book['title']} by {book['author']}")
         self.save_books()
-
+    # """ return_book Function End """
 
 def main():
     library = Library()
