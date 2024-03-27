@@ -1,7 +1,22 @@
-2024-03-27 10:43:00,246 - ERROR - File Not Found
-2024-03-27 10:43:02,029 - INFO - Adding a book
-2024-03-27 10:43:13,748 - INFO - Book 'Love' added successfully
-2024-03-27 10:44:49,787 - INFO - Adding a book
-2024-03-27 10:45:00,186 - INFO - Book 'Sweet' added successfully
-2024-03-27 10:47:21,563 - INFO - Adding a book
-2024-03-27 10:47:33,067 - INFO - Book 'Love' added successfully
+2024-03-27 13:56:45,474 - No book data found.
+2024-03-27 13:57:03,540 - Added book: Love by Rasel
+2024-03-27 13:57:37,172 - Added book: jibon by nai
+2024-03-27 13:58:30,033 - Added book: kk by ll
+2024-03-27 13:59:10,749 - Updated book: Hate by maria
+2024-03-27 13:59:54,419 - Book with ID 6 not found.
+2024-03-27 14:01:13,668 - Returned book: Hate by vainis
+2024-03-27 14:02:04,901 - Book with ID 6 not found.
+2024-03-27 14:05:30,765 - No book data found.
+2024-03-27 14:08:13,692 - No book data found.
+2024-03-27 14:09:38,511 - No book data found.
+2024-03-27 14:09:52,769 - No book data found.
+2024-03-27 16:48:14,996 - No book data found.
+2024-03-27 16:48:31,109 - Added book: Love by Rasel
+2024-03-27 16:48:52,601 - Added book: Life by Nirob
+2024-03-27 16:49:46,872 - Book with ID 2 not found.
+2024-03-27 16:52:05,977 - No book data found.
+2024-03-27 16:52:15,520 - Added book: Love by rasel
+2024-03-27 16:52:27,733 - Added book: Nil by Nirob
+2024-03-27 16:52:56,318 - Book with ID 2 not found.
+2024-03-27 16:54:06,848 - Book with ID 2 not found.
+2024-03-27 16:54:58,876 - Returned book: Nil by Moli

@@ -1,1 +1,20 @@
-[{"title": "Love", "author": "Rasel", "book_id": "02", "publication_year": 1447}]
+[
+    {
+        "title": "Love",
+        "author": "rasel",
+        "id": 1,
+        "published_year": "1259"
+    },
+    {
+        "title": "Nil",
+        "author": "Nirob",
+        "id": 2,
+        "published_year": "15788"
+    },
+    {
+        "title": "Nil",
+        "author": "Moli",
+        "id": "2",
+        "published_year": "1588"
+    }
+]
