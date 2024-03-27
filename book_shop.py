@@ -57,25 +57,24 @@ class Library:
         print("4. Update Book")
         print("5. Exit")
         choice = input("Enter your choice: ")
+        if choice == '1':
+            self.add_book()
+        elif choice == '2':
+            self.search_book()
+        elif choice == '3':
+            self.delete_book()
+        elif choice == '4':
+            self.update_book()
+        elif choice == '5':
+            exit()
         return choice
 
 # All def function will be called from here
 def main():
     library = Library()
     library.load_books()
-    # library.save_books()
-    while True:
-        choice = library.choose_option()
-        if choice == '1':
-            library.add_book()
-            add_another = input("Do you want to add another book? (yes/no): ")
-            if add_another.lower() != 'yes':
-                break
-        elif choice == '5':
-            library.save_books()
-            break
-        else:
-            print("Invalid choice. Please select a valid option.")
-            
+    library.choose_option()
+    library.save_books()
+    
 if __name__ == '__main__':
     main()
