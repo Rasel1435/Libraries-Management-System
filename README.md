@@ -1,8 +1,7 @@
 # Libraries-Management-System
 
 # Summary:
-### I have created requrements.txt file by
-    pip freeze > requirements.txt
+
 I've developed a simple Library Management System using Python. Here's an overview of its functionality:
 
 1. **Library Class**: 
@@ -28,3 +27,7 @@ I've developed a simple Library Management System using Python. Here's an overvi
     - Initializes the Library class, loads existing book data, and starts a loop to prompt users for actions until they choose to exit.
 
 This system provides basic functionality for managing a library's book inventory efficiently. It can be expanded with additional features such as user authentication, searching books, or categorizing books based on genres. Overall, it demonstrates fundamental principles of object-oriented programming, file handling, and user interaction in Python.
+
+
+### I have created requrements.txt file by
+    pip freeze > requirements.txt
