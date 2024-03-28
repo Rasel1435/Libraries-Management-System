@@ -1,7 +1,6 @@
 # Libraries-Management-System
 
 # Summary:
-
 I've developed a simple Library Management System using Python. Here's an overview of its functionality:
 
 1. **Library Class**: 
